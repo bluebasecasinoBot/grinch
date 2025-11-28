@@ -46,7 +46,7 @@ __SYD.p1_txt = function()
             style:`font-size:${__p(["p1","fontSize"],"50px")};font-family:font1;font-weight:900;text-transform:uppercase;width:100%;text-align:center;color:${SYD_VAR.tokenHeader.get()};`
         },
         [
-            "$Grinch-Coin"
+            "格林奇 -$ Grinch"
         ],
         {
             legacyName:"p1_txt"

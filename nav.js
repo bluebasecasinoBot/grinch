@@ -75,7 +75,7 @@ __SYD.nav_enclose_f = function()
                 border:SYD_VAR.secondaryGold.get() ,
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:"16px",
-                txt:"Grinch",
+                txt:"格林奇",
                 icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get().grinch_logo
             }),
         ],
