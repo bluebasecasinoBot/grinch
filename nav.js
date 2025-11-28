@@ -258,11 +258,11 @@ __SYD.navMenu_main = function()
             style:`position:absolute;top:100%;right:0px;height:fit-content;width:fit-content;min-width:250px;padding:20px 10px;display:${__p(["nav","dropNav"],false) ? "flex" : "none"};flex-direction:column;gap:20px;background:${SYD_VAR.navBackground.get()};border:1px solid ${SYD_VAR.primarySnowWhite.get()};border-radius:5px;`
         },
         [
-            __SYD.navList({txt:"Home" , href:"p1"}),
-            __SYD.navList({txt:"Story" , href:"p2"}),
-            __SYD.navList({txt:"Tokenomics" , href:"p4"}),
-            __SYD.navList({txt:"Roadmap" , href:"p3"}),
-            __SYD.navList({txt:"Buy" , href:"p5"})
+            __SYD.navList({txt:"Home" , href:"#p1"}),
+            __SYD.navList({txt:"Story" , href:"#p2"}),
+            __SYD.navList({txt:"Tokenomics" , href:"#p4"}),
+            __SYD.navList({txt:"Roadmap" , href:"#p3"}),
+            __SYD.navList({txt:"Buy" , href:"#p5"})
         ],
         {
             legacyName:"navMenu_main"
