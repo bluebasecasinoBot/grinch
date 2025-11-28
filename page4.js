@@ -4,7 +4,8 @@ __SYD.p4 = () =>{
     return $(
         "div",
         {
-            style:`height:fit-content;width:100%;padding:0px 10px;padding-bottom:50px;display:flex;flex-direction:column;gap:50px;align-items:center;background-color:${SYD_VAR.bgHero.get()};`
+            style:`height:fit-content;width:100%;padding:0px 10px;padding-bottom:50px;display:flex;flex-direction:column;gap:50px;align-items:center;background-color:${SYD_VAR.bgHero.get()};`,
+            id:"p4"
         },
         [
             __SYD.p4_header(),

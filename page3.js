@@ -5,7 +5,8 @@ __SYD.p3 = function()
     return $(
         "div",
         {
-            style:`height:fit-content;width:100%;padding:130px 10px;padding-bottom:300px;display:flex;flex-direction:column;gap:30px;align-items:center;background-color:${SYD_VAR.bgHero.get()};`
+            style:`height:fit-content;width:100%;padding:130px 10px;padding-bottom:300px;display:flex;flex-direction:column;gap:30px;align-items:center;background-color:${SYD_VAR.bgHero.get()};`,
+            id:"p3"
         },
         [
             __SYD.p3_header(),

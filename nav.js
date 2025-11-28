@@ -100,7 +100,8 @@ __SYD.nav_enclose_s = function(render)
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:__p(["nav","adxSize"],"14px"),
                 txt:"Home",
-                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`bell_${__p(["nav_enclose_s","hover"],null) === 0 ? "gif" : "png"}`]
+                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`bell_${__p(["nav_enclose_s","hover"],null) === 0 ? "gif" : "png"}`],
+                href:"#p1"
             }),
             __SYD.nav_btn({
                 id:1,
@@ -109,7 +110,8 @@ __SYD.nav_enclose_s = function(render)
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:__p(["nav","adxSize"],"14px"),
                 txt:"Story",
-                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`book_${__p(["nav_enclose_s","hover"],null) === 1 ? "gif" : "png"}`]
+                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`book_${__p(["nav_enclose_s","hover"],null) === 1 ? "gif" : "png"}`],
+                href:"#p2"
             }),
             __SYD.nav_btn({
                 id:2,
@@ -118,7 +120,8 @@ __SYD.nav_enclose_s = function(render)
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:__p(["nav","adxSize"],"14px"),
                 txt:"Tokenomics",
-                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`gift_${__p(["nav_enclose_s","hover"],null) === 2 ? "gif" : "png"}`]
+                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`gift_${__p(["nav_enclose_s","hover"],null) === 2 ? "gif" : "png"}`],
+                href:"#p4"
             }),
             __SYD.nav_btn({
                 id:3,
@@ -127,7 +130,8 @@ __SYD.nav_enclose_s = function(render)
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:__p(["nav","adxSize"],"14px"),
                 txt:"Roadmap",
-                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`lights_${__p(["nav_enclose_s","hover"],null) === 3 ? "gif" : "png"}`]
+                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`lights_${__p(["nav_enclose_s","hover"],null) === 3 ? "gif" : "png"}`],
+                href:"#p3"
             }),
             __SYD.nav_btn({
                 id:4,
@@ -136,7 +140,8 @@ __SYD.nav_enclose_s = function(render)
                 clr:SYD_VAR.primarySnowWhite.get() ,
                 fSize:__p(["nav","adxSize"],"14px"),
                 txt:"Buy",
-                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`sled_${__p(["nav_enclose_s","hover"],null) === 4 ? "gif" : "png"}`]
+                icon:!__p(["container","allLoad"],false) ? "" :SYD_VAR.loadedImages.get()[`sled_${__p(["nav_enclose_s","hover"],null) === 4 ? "gif" : "png"}`],
+                href:"#p5"
             }),
         ],
         {
@@ -152,7 +157,7 @@ __SYD.nav_enclose_s = function(render)
     )
 }
 
-__SYD.nav_btn = ({id , bg , border , clr , fSize , txt , bRad = "25px" , action = ()=>{} , icon = null , render = true}) =>
+__SYD.nav_btn = ({id , bg , border , clr , fSize , txt , bRad = "25px" , action = ()=>{} , icon = null , render = true , href = "#"}) =>
 {
     return $(
         "div",
@@ -167,7 +172,7 @@ __SYD.nav_btn = ({id , bg , border , clr , fSize , txt , bRad = "25px" , action 
             isRenderable:render,
             legacyName:"nav_btn",
             events:{
-                onclick:action,
+                onclick:e =>{location.href = href},
                 onmouseover:()=>{
                     const state = __g("nav_enclose_s");
                     state.hover = id;
@@ -253,11 +258,11 @@ __SYD.navMenu_main = function()
             style:`position:absolute;top:100%;right:0px;height:fit-content;width:fit-content;min-width:250px;padding:20px 10px;display:${__p(["nav","dropNav"],false) ? "flex" : "none"};flex-direction:column;gap:20px;background:${SYD_VAR.navBackground.get()};border:1px solid ${SYD_VAR.primarySnowWhite.get()};border-radius:5px;`
         },
         [
-            __SYD.navList({txt:"Home"}),
-            __SYD.navList({txt:"Story"}),
-            __SYD.navList({txt:"Tokenomics"}),
-            __SYD.navList({txt:"Roadmap"}),
-            __SYD.navList({txt:"Buy"})
+            __SYD.navList({txt:"Home" , href:"p1"}),
+            __SYD.navList({txt:"Story" , href:"p2"}),
+            __SYD.navList({txt:"Tokenomics" , href:"p4"}),
+            __SYD.navList({txt:"Roadmap" , href:"p3"}),
+            __SYD.navList({txt:"Buy" , href:"p5"})
         ],
         {
             legacyName:"navMenu_main"

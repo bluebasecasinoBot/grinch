@@ -45,7 +45,8 @@ __SYD.p2 = () =>{
     return $(
         "div",
         {
-            style:`height:fit-content;width:100%;display:flex;flex-direction:${__p(["p2" , "mobile"],false) ? "column" : "row"};gap:30px;align-items:center;padding:20px 10px;font-family:font2;background-color:${SYD_VAR.bgHero.get()};`
+            style:`height:fit-content;width:100%;display:flex;flex-direction:${__p(["p2" , "mobile"],false) ? "column" : "row"};gap:30px;align-items:center;padding:20px 10px;font-family:font2;background-color:${SYD_VAR.bgHero.get()};`,
+            id:"p2"
         },
         [
             __SYD.p2_img(),

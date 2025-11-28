@@ -5,7 +5,8 @@ __SYD.p1 = function()
     return $(
         "div",
         {
-            style:`height:fit-content;width:100%;display:flex;flex-direction:column;gap:30px;align-items:center;padding:20px 10px;font-family:font2;`
+            style:`height:fit-content;width:100%;display:flex;flex-direction:column;gap:30px;align-items:center;padding:20px 10px;font-family:font2;`,
+            id:"p1"
         },
         [
             __SYD.p1_img(),

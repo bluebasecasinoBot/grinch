@@ -4,7 +4,8 @@ __SYD.p5 = () =>{
     return $(
         "div",
         {
-            style:`height:fit-content;width:100%;padding:100px 10px;padding-bottom:100px;display:flex;flex-direction:column;gap:30px;align-items:center;background-color:${"transparent"};`
+            style:`height:fit-content;width:100%;padding:100px 10px;padding-bottom:100px;display:flex;flex-direction:column;gap:30px;align-items:center;background-color:${"transparent"};`,
+            id:"p5"
         },
         [
             __SYD.p5_header(),
