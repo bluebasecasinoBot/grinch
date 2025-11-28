@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all linear .3s;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(./assets/fonts/Bungee-Regular.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(./assets/fonts/LuckiestGuy-Regular.ttf);
+}
+
+.container
+{
+    position: relative;
+    isolation: isolate;
+}
+
+.container::after
+{
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.navClick{
+    cursor: pointer;
+    transition: all linear .2s;
+}
+
+.navClick:hover
+{
+    transform: translateY(-2px);
+}
+
+.navList
+{
+    position: relative;
+    isolation: isolate;
+}
+.navList::after
+{
+    z-index: -1;
+    position: absolute;
+    content:"";
+    top:0px;
+    left: 0px;
+    width:0px;
+    height:100%;
+    background-color: rgba(255, 255, 255, .1);
+    transition: all linear .3s;
+}
+
+.navList:hover::after
+{
+    width:100%;
+}
+
+.slide-in-left {
+    animation: slideLeft 0.5s ease-out forwards;
+    transform: translateX(-100%);
+}
+
+@keyframes slideLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideRight 0.5s ease-out forwards;
+    transform: translateX(100%);
+}
+
+@keyframes slideRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.slide-in-left_r {
+    animation: slideLeft_r 0.5s ease-out forwards;
+    transform: translateX(0%);
+}
+
+@keyframes slideLeft_r {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-in-right_r {
+    animation: slideRight_r 0.5s ease-out forwards;
+    transform: translateX();
+}
+
+@keyframes slideRight_r {
+    to {
+        transform: translateX(100%);
+    }
+}
