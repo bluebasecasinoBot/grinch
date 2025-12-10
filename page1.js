@@ -14,7 +14,7 @@ __SYD.p1 = function()
             __SYD.p1_tg()
         ],
         {
-            isRenderable:__p(["container","allLoad"],false),
+            // isRenderable:__p(["container","allLoad"],false),
             createState:{
                 stateName:"p1",
                 state:{
@@ -80,3 +80,4 @@ __SYD.p1_tg = function()
         }
     )
 }
+
