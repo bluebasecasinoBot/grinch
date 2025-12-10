@@ -10,9 +10,11 @@ __SYD.p1 = function()
         },
         [
             __SYD.p1_img(),
-            __SYD.p1_txt()
+            __SYD.p1_txt(),
+            __SYD.p1_tg()
         ],
         {
+            isRenderable:__p(["container","allLoad"],false),
             createState:{
                 stateName:"p1",
                 state:{
@@ -50,6 +52,31 @@ __SYD.p1_txt = function()
         ],
         {
             legacyName:"p1_txt"
+        }
+    )
+}
+
+__SYD.p1_tg = function()
+{
+    return $(
+        "button",
+        {
+            style: `
+            padding:18px 35px;
+            font-size:18px;
+            border-radius:40px;
+            border:1px solid ${SYD_VAR.ctaPrimary.get()};
+            background:${SYD_VAR.ctaSecondary.get()};
+            color:${"#ffffff"};
+            font-weight:700;
+            cursor:pointer;
+            backdrop-filter:blur(5px);
+            font-family:font1;
+            `
+        },
+        ["Join Community"],
+        {
+            events:{onclick:e=>location.href = "https://t.me/GrinchON_BSC"}
         }
     )
 }
